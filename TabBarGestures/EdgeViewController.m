@@ -11,6 +11,10 @@
 @interface EdgeViewController ()
 @property (weak, nonatomic) IBOutlet UIView *edgeMenu;
 @property BOOL menuOpen;
+
+@property (strong ,nonatomic) UIScreenEdgePanGestureRecognizer *edgePan;
+@property (strong ,nonatomic) UIPanGestureRecognizer *normPan;
+
 @end
 
 @implementation EdgeViewController
@@ -19,11 +23,37 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _menuOpen = NO;
-}
-- (IBAction)panNormal:(id)sender {
+    
+    self.edgePan = [[UIScreenEdgePanGestureRecognizer alloc]initWithTarget:self action:@selector(panMenu:)];
+    [self.edgePan setEdges:UIRectEdgeRight];
+    [self.edgeMenu addGestureRecognizer:self.edgePan];
+    
+    self.normPan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panMenu:)];
+    
+    //[self.edgeMenu addGestureRecognizer:self.normPan];
+    
     
 }
-- (IBAction)panOnEdge:(UIScreenEdgePanGestureRecognizer*)sender {
+
+
+-(void)setMenuOpen:(BOOL)isOpen{
+    _menuOpen = isOpen;
+    if(isOpen){
+        [self.edgeMenu removeGestureRecognizer:self.edgePan];
+        [self.edgeMenu addGestureRecognizer:self.normPan];
+        
+    }else{
+        [self.edgeMenu removeGestureRecognizer:self.normPan];
+        [self.edgeMenu addGestureRecognizer:self.edgePan];
+    }
+    
+}
+
+
+- (void)panMenu:(UIScreenEdgePanGestureRecognizer*)sender {
+    NSLog(@"menu open = %i ",self.menuOpen);
+    //don't use this pan when the menu is open
+    
     
     CGPoint translationInView = [sender translationInView:self.view];
     CGPoint oldCenter = sender.view.center;
@@ -40,12 +70,14 @@
                 self.edgeMenu.frame = CGRectMake(20, 110, 500, 400);
                 
             }];
+            [self setMenuOpen:YES];
         }else{
             NSLog(@"menu closes");
             [UIView animateWithDuration:0.7f animations:^{
                 self.edgeMenu.frame = CGRectMake(350, 110, 500, 400);
                 
             }];
+            [self setMenuOpen:NO];
         }
         return;
     }

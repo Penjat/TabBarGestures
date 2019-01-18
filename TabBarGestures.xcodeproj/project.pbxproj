@@ -19,6 +19,7 @@
 		0B2662A721F16A6700728DF0 /* TapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2662A621F16A6700728DF0 /* TapViewController.m */; };
 		0B2662AA21F16D9800728DF0 /* SwipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2662A921F16D9800728DF0 /* SwipViewController.m */; };
 		0B2662AD21F174F900728DF0 /* EdgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2662AC21F174F900728DF0 /* EdgeViewController.m */; };
+		0B2662B021F186D400728DF0 /* RotateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B2662AF21F186D400728DF0 /* RotateViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		0B2662A921F16D9800728DF0 /* SwipViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwipViewController.m; sourceTree = "<group>"; };
 		0B2662AB21F174F900728DF0 /* EdgeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EdgeViewController.h; sourceTree = "<group>"; };
 		0B2662AC21F174F900728DF0 /* EdgeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EdgeViewController.m; sourceTree = "<group>"; };
+		0B2662AE21F186D400728DF0 /* RotateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RotateViewController.h; sourceTree = "<group>"; };
+		0B2662AF21F186D400728DF0 /* RotateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RotateViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				0B2662A921F16D9800728DF0 /* SwipViewController.m */,
 				0B2662AB21F174F900728DF0 /* EdgeViewController.h */,
 				0B2662AC21F174F900728DF0 /* EdgeViewController.m */,
+				0B2662AE21F186D400728DF0 /* RotateViewController.h */,
+				0B2662AF21F186D400728DF0 /* RotateViewController.m */,
 				0B26627321F15E5E00728DF0 /* Main.storyboard */,
 				0B26627621F15E5E00728DF0 /* Assets.xcassets */,
 				0B26627821F15E5E00728DF0 /* LaunchScreen.storyboard */,
@@ -289,6 +294,7 @@
 				0B26627D21F15E5F00728DF0 /* main.m in Sources */,
 				0B26626F21F15E5E00728DF0 /* AppDelegate.m in Sources */,
 				0B2662AA21F16D9800728DF0 /* SwipViewController.m in Sources */,
+				0B2662B021F186D400728DF0 /* RotateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
