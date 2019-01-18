@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SwipViewController.h
 //  TabBarGestures
 //
 //  Created by Spencer Symington on 2019-01-17.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+NS_ASSUME_NONNULL_BEGIN
 
+@interface SwipViewController : UIViewController
 
 @end
 
+NS_ASSUME_NONNULL_END
